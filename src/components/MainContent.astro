@@ -47,7 +47,7 @@ const getGreeting = () => {
                 class="absolute bottom-2 right-2 bg-spotify-green rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300"
                 aria-label={`Play ${album.title}`}
               >
-                <img src="/icons/play.svg" alt="" class="w-6 h-6" />
+                <img src={`${import.meta.env.BASE_URL}icons/play.svg`} alt="" class="w-6 h-6" />
               </button>
             </div>
             <h3 class="font-semibold text-white mb-1 truncate">{album.title}</h3>
