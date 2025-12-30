@@ -1,0 +1,45 @@
+---
+// Volume control component for playback bar
+---
+
+<div class="flex items-center justify-end gap-4">
+  <!-- Queue Icon -->
+  <button
+    class="text-gray-400 hover:text-white transition-colors"
+    aria-label="Queue"
+  >
+    <img src="/icons/list.svg" alt="" class="w-5 h-5" />
+  </button>
+
+  <!-- Devices Icon -->
+  <button
+    class="text-gray-400 hover:text-white transition-colors"
+    aria-label="Connect to a device"
+  >
+    <img src="/icons/monitor.svg" alt="" class="w-5 h-5" />
+  </button>
+
+  <!-- Volume Slider -->
+  <div class="flex items-center gap-2 w-32">
+    <button
+      class="text-gray-400 hover:text-white transition-colors"
+      aria-label="Mute"
+    >
+      <img src="/icons/volume-2.svg" alt="" class="w-5 h-5" />
+    </button>
+    <div class="flex-1 h-1 bg-gray-600 rounded-full overflow-hidden group cursor-pointer">
+      <div
+        class="h-full bg-white group-hover:bg-spotify-green transition-colors"
+        style="width: 70%"
+      ></div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Icon -->
+  <button
+    class="text-gray-400 hover:text-white transition-colors"
+    aria-label="Fullscreen"
+  >
+    <img src="/icons/maximize.svg" alt="" class="w-5 h-5" />
+  </button>
+</div>

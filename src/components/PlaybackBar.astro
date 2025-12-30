@@ -1,0 +1,27 @@
+---
+// Main playback bar component at the bottom of the screen
+import TrackInfo from './TrackInfo.astro';
+import PlaybackControls from './PlaybackControls.astro';
+import VolumeControl from './VolumeControl.astro';
+---
+
+<div
+  class="fixed bottom-0 left-0 right-0 z-50 h-[90px] bg-spotify-light-gray border-t border-gray-800"
+>
+  <div class="grid grid-cols-3 items-center gap-4 px-4 h-full">
+    <!-- Left: Track Info -->
+    <div class="flex justify-start">
+      <TrackInfo />
+    </div>
+
+    <!-- Center: Playback Controls -->
+    <div class="flex justify-center">
+      <PlaybackControls />
+    </div>
+
+    <!-- Right: Volume Control -->
+    <div class="flex justify-end">
+      <VolumeControl />
+    </div>
+  </div>
+</div>

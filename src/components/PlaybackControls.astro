@@ -1,0 +1,54 @@
+---
+// Playback controls component with play/pause and other controls
+import ProgressBar from './ProgressBar.astro';
+---
+
+<div class="flex flex-col items-center gap-2 w-full max-w-2xl mx-auto">
+  <!-- Control Buttons Row -->
+  <div class="flex items-center justify-center gap-4">
+    <!-- Shuffle -->
+    <button
+      class="text-gray-400 hover:text-white transition-colors"
+      aria-label="Shuffle"
+    >
+      <img src="/icons/shuffle.svg" alt="" class="w-5 h-5" />
+    </button>
+
+    <!-- Previous -->
+    <button
+      class="text-gray-400 hover:text-white transition-colors"
+      aria-label="Previous track"
+    >
+      <img src="/icons/skip-back.svg" alt="" class="w-5 h-5" />
+    </button>
+
+    <!-- Play/Pause (LARGER) -->
+    <button
+      class="bg-white text-black rounded-full p-2 hover:scale-105 transition-transform"
+      aria-label="Play"
+    >
+      <img src="/icons/play.svg" alt="" class="w-8 h-8" />
+    </button>
+
+    <!-- Next -->
+    <button
+      class="text-gray-400 hover:text-white transition-colors"
+      aria-label="Next track"
+    >
+      <img src="/icons/skip-forward.svg" alt="" class="w-5 h-5" />
+    </button>
+
+    <!-- Repeat -->
+    <button
+      class="text-gray-400 hover:text-white transition-colors"
+      aria-label="Repeat"
+    >
+      <img src="/icons/repeat.svg" alt="" class="w-5 h-5" />
+    </button>
+  </div>
+
+  <!-- Progress Bar Row -->
+  <div class="w-full">
+    <ProgressBar />
+  </div>
+</div>

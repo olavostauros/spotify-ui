@@ -1,0 +1,30 @@
+---
+// Track information component for playback bar
+---
+
+<div class="flex items-center gap-4 min-w-0">
+  <!-- Album Thumbnail -->
+  <img
+    src="https://picsum.photos/56/56?random=1"
+    alt="Album art"
+    class="w-14 h-14 rounded"
+  />
+
+  <!-- Song Info -->
+  <div class="min-w-0 flex-1">
+    <div class="text-sm font-semibold truncate hover:underline cursor-pointer">
+      Blinding Lights
+    </div>
+    <div class="text-xs text-gray-400 truncate hover:underline hover:text-white cursor-pointer">
+      The Weeknd
+    </div>
+  </div>
+
+  <!-- Like Button -->
+  <button
+    class="text-gray-400 hover:text-white transition-colors"
+    aria-label="Like song"
+  >
+    <img src="/icons/heart.svg" alt="" class="w-5 h-5" />
+  </button>
+</div>

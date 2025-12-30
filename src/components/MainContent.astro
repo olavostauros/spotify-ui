@@ -1,0 +1,60 @@
+---
+// Main content area component
+const albums = [
+  { title: 'Daily Mix 1', description: 'The Weeknd, Dua Lipa, and more', image: 1 },
+  { title: 'Discover Weekly', description: 'Your weekly mixtape of fresh music', image: 2 },
+  { title: 'Release Radar', description: 'Catch all the latest music', image: 3 },
+  { title: 'Liked Songs', description: '147 liked songs', image: 4 },
+  { title: 'Chill Hits', description: 'Kick back to the best new and recent chill', image: 5 },
+  { title: 'Rock Classics', description: 'Rock legends & epic songs', image: 6 },
+  { title: 'Jazz Vibes', description: 'The original chill instrumental music', image: 7 },
+  { title: 'Acoustic Morning', description: 'Wake up gently with acoustic favorites', image: 8 },
+  { title: 'Workout Mix', description: 'Get your heart pumping', image: 9 },
+  { title: 'Deep Focus', description: 'Keep calm and focus', image: 10 },
+];
+
+const getGreeting = () => {
+  const hour = new Date().getHours();
+  if (hour < 12) return 'Good morning';
+  if (hour < 18) return 'Good afternoon';
+  return 'Good evening';
+};
+---
+
+<main class="flex-1 h-screen overflow-y-auto bg-gradient-to-b from-spotify-light-gray to-spotify-gray">
+  <!-- Header -->
+  <header class="bg-gradient-to-b from-gray-900/40 to-transparent px-8 pt-6 pb-4">
+    <h1 class="text-4xl font-bold mb-6">{getGreeting()}</h1>
+  </header>
+
+  <!-- Content -->
+  <section class="px-8 py-4">
+    <h2 class="text-2xl font-bold mb-4">Made for you</h2>
+
+    <!-- Album Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      {
+        albums.map((album) => (
+          <div class="bg-spotify-light-gray p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer group">
+            <div class="relative mb-4">
+              <img
+                src={`https://picsum.photos/200/200?random=${album.image}`}
+                alt={album.title}
+                class="w-full aspect-square object-cover rounded-md shadow-lg"
+              />
+              <!-- Play Button (shown on hover) -->
+              <button
+                class="absolute bottom-2 right-2 bg-spotify-green rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+                aria-label={`Play ${album.title}`}
+              >
+                <img src="/icons/play.svg" alt="" class="w-6 h-6" />
+              </button>
+            </div>
+            <h3 class="font-semibold text-white mb-1 truncate">{album.title}</h3>
+            <p class="text-sm text-gray-400 truncate">{album.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</main>

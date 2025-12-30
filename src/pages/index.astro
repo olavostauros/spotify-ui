@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import MainContent from '../components/MainContent.astro';
+import PlaybackBar from '../components/PlaybackBar.astro';
+---
+
+<Layout title="Spotify Clone">
+  <div class="h-screen flex flex-col">
+    <!-- Main Layout Container -->
+    <div class="flex flex-1 overflow-hidden pb-24">
+      <!-- Sidebar -->
+      <Sidebar />
+
+      <!-- Main Content Area -->
+      <MainContent />
+    </div>
+
+    <!-- Playback Bar (Fixed Bottom) -->
+    <PlaybackBar />
+  </div>
+</Layout>

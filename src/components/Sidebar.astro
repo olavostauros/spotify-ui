@@ -1,0 +1,103 @@
+---
+// Sidebar navigation component
+const playlists = [
+  'Liked Songs',
+  'Daily Mix 1',
+  'Chill Vibes',
+  'Workout Motivation',
+  'Focus Flow',
+  'Road Trip Classics',
+  'Indie Discoveries',
+  'Jazz Essentials',
+  'Sleep Sounds',
+  'Party Hits',
+];
+---
+
+<aside class="w-60 h-screen bg-spotify-black overflow-y-auto flex flex-col">
+  <!-- Logo -->
+  <div class="p-6">
+    <h1 class="text-2xl font-bold text-white">Spotify</h1>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="px-2">
+    <ul class="space-y-2">
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-4 px-4 py-3 text-sm font-medium text-white hover:text-white transition-colors rounded-md"
+        >
+          <img src="/icons/home.svg" alt="" class="w-6 h-6" />
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-4 px-4 py-3 text-sm font-medium text-gray-400 hover:text-white transition-colors rounded-md"
+        >
+          <img src="/icons/search.svg" alt="" class="w-6 h-6" />
+          <span>Search</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-4 px-4 py-3 text-sm font-medium text-gray-400 hover:text-white transition-colors rounded-md"
+        >
+          <img src="/icons/library.svg" alt="" class="w-6 h-6" />
+          <span>Your Library</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Spacing -->
+  <div class="mt-6"></div>
+
+  <!-- Create Playlist & Liked Songs -->
+  <nav class="px-2">
+    <ul class="space-y-2">
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-4 px-4 py-3 text-sm font-medium text-gray-400 hover:text-white transition-colors rounded-md"
+        >
+          <img src="/icons/plus.svg" alt="" class="w-6 h-6" />
+          <span>Create Playlist</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-4 px-4 py-3 text-sm font-medium text-gray-400 hover:text-white transition-colors rounded-md"
+        >
+          <img src="/icons/heart.svg" alt="" class="w-6 h-6 text-spotify-green" />
+          <span>Liked Songs</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Divider -->
+  <div class="border-t border-gray-800 mx-6 my-4"></div>
+
+  <!-- Playlists -->
+  <nav class="px-2 flex-1 overflow-y-auto">
+    <ul class="space-y-2">
+      {
+        playlists.map((playlist) => (
+          <li>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              {playlist}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</aside>
