@@ -35,7 +35,7 @@ const playlists = [
     <ul class="space-y-2">
       <li>
         <a
-          href="/"
+          href={`${import.meta.env.BASE_URL}/`}
           class="flex items-center gap-4 px-4 py-3 text-sm font-medium text-white hover:text-white transition-colors rounded-md"
         >
           <Icon name="home" class="w-6 h-6" />
@@ -44,7 +44,7 @@ const playlists = [
       </li>
       <li>
         <a
-          href="/search"
+          href={`${import.meta.env.BASE_URL}/search`}
           class="flex items-center gap-4 px-4 py-3 text-sm font-medium text-gray-400 hover:text-white transition-colors rounded-md"
         >
           <Icon name="search" class="w-6 h-6" />
@@ -53,7 +53,7 @@ const playlists = [
       </li>
       <li>
         <a
-          href="/library"
+          href={`${import.meta.env.BASE_URL}/library`}
           class="flex items-center gap-4 px-4 py-3 text-sm font-medium text-gray-400 hover:text-white transition-colors rounded-md"
         >
           <Icon name="library" class="w-6 h-6" />
@@ -80,7 +80,7 @@ const playlists = [
       </li>
       <li>
         <a
-          href="/playlist/1"
+          href={`${import.meta.env.BASE_URL}/playlist/1`}
           class="flex items-center gap-4 px-4 py-3 text-sm font-medium text-spotify-green hover:text-white transition-colors rounded-md"
         >
           <Icon name="heart" class="w-6 h-6" />
@@ -100,7 +100,7 @@ const playlists = [
         playlists.map((playlist, index) => (
           <li>
             <a
-              href={`/playlist/${(index % 3) + 1}`}
+              href={`${import.meta.env.BASE_URL}/playlist/${(index % 3) + 1}`}
               class="block px-4 py-2 text-sm text-gray-400 hover:text-white transition-colors"
             >
               {playlist}

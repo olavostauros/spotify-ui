@@ -37,7 +37,7 @@ const getGreeting = () => {
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
       {
         albums.map((album, index) => (
-          <a href={`/album/${(index % 3) + 1}`} class="bg-spotify-light-gray p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer group">
+          <a href={`${import.meta.env.BASE_URL}/album/${(index % 3) + 1}`} class="bg-spotify-light-gray p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer group">
             <div class="relative mb-4">
               <img
                 src={`https://picsum.photos/200/200?random=${album.image}`}

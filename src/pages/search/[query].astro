@@ -20,7 +20,7 @@ const topResult = {
   title: 'The Weeknd',
   subtitle: 'Artist',
   image: 'https://picsum.photos/seed/weeknd/300/300',
-  href: '/artist/1',
+  href: `${import.meta.env.BASE_URL}/artist/1`,
 };
 
 const songs = [
@@ -31,20 +31,20 @@ const songs = [
 ];
 
 const artists = [
-  { title: 'The Weeknd', subtitle: '95M monthly listeners', image: 'https://picsum.photos/seed/artist1/300/300', type: 'artist' as const, href: '/artist/1' },
-  { title: 'Ariana Grande', subtitle: '82M monthly listeners', image: 'https://picsum.photos/seed/artist2/300/300', type: 'artist' as const, href: '/artist/2' },
-  { title: 'Dua Lipa', subtitle: '78M monthly listeners', image: 'https://picsum.photos/seed/artist3/300/300', type: 'artist' as const, href: '/artist/3' },
+  { title: 'The Weeknd', subtitle: '95M monthly listeners', image: 'https://picsum.photos/seed/artist1/300/300', type: 'artist' as const, href: `${import.meta.env.BASE_URL}/artist/1` },
+  { title: 'Ariana Grande', subtitle: '82M monthly listeners', image: 'https://picsum.photos/seed/artist2/300/300', type: 'artist' as const, href: `${import.meta.env.BASE_URL}/artist/2` },
+  { title: 'Dua Lipa', subtitle: '78M monthly listeners', image: 'https://picsum.photos/seed/artist3/300/300', type: 'artist' as const, href: `${import.meta.env.BASE_URL}/artist/3` },
 ];
 
 const albums = [
-  { title: 'After Hours', subtitle: 'The Weeknd', image: 'https://picsum.photos/seed/album1/300/300', type: 'album' as const, href: '/album/1' },
-  { title: 'Starboy', subtitle: 'The Weeknd', image: 'https://picsum.photos/seed/album2/300/300', type: 'album' as const, href: '/album/2' },
-  { title: 'Beauty Behind The Madness', subtitle: 'The Weeknd', image: 'https://picsum.photos/seed/album3/300/300', type: 'album' as const, href: '/album/3' },
+  { title: 'After Hours', subtitle: 'The Weeknd', image: 'https://picsum.photos/seed/album1/300/300', type: 'album' as const, href: `${import.meta.env.BASE_URL}/album/1` },
+  { title: 'Starboy', subtitle: 'The Weeknd', image: 'https://picsum.photos/seed/album2/300/300', type: 'album' as const, href: `${import.meta.env.BASE_URL}/album/2` },
+  { title: 'Beauty Behind The Madness', subtitle: 'The Weeknd', image: 'https://picsum.photos/seed/album3/300/300', type: 'album' as const, href: `${import.meta.env.BASE_URL}/album/3` },
 ];
 
 const playlists = [
-  { title: 'This Is The Weeknd', subtitle: 'All the essentials', image: 'https://picsum.photos/seed/playlist1/300/300', type: 'playlist' as const, href: '/playlist/1' },
-  { title: 'Pop Hits', subtitle: 'The biggest pop songs', image: 'https://picsum.photos/seed/playlist2/300/300', type: 'playlist' as const, href: '/playlist/2' },
+  { title: 'This Is The Weeknd', subtitle: 'All the essentials', image: 'https://picsum.photos/seed/playlist1/300/300', type: 'playlist' as const, href: `${import.meta.env.BASE_URL}/playlist/1` },
+  { title: 'Pop Hits', subtitle: 'The biggest pop songs', image: 'https://picsum.photos/seed/playlist2/300/300', type: 'playlist' as const, href: `${import.meta.env.BASE_URL}/playlist/2` },
 ];
 ---
 
