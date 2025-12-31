@@ -1,5 +1,7 @@
 ---
 // Main content area component
+import Icon from './Icon.astro';
+
 const albums = [
   { title: 'Daily Mix 1', description: 'The Weeknd, Dua Lipa, and more', image: 1 },
   { title: 'Discover Weekly', description: 'Your weekly mixtape of fresh music', image: 2 },
@@ -44,10 +46,10 @@ const getGreeting = () => {
               />
               <!-- Play Button (shown on hover) -->
               <button
-                class="absolute bottom-2 right-2 bg-spotify-green rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+                class="absolute bottom-2 right-2 bg-spotify-green text-black rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300"
                 aria-label={`Play ${album.title}`}
               >
-                <img src={`${import.meta.env.BASE_URL}/icons/play.svg`} alt="" class="w-6 h-6" />
+                <Icon name="play" class="w-6 h-6" />
               </button>
             </div>
             <h3 class="font-semibold text-white mb-1 truncate">{album.title}</h3>

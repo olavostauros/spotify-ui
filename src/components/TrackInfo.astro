@@ -1,5 +1,6 @@
 ---
 // Track information component for playback bar
+import Icon from './Icon.astro';
 ---
 
 <div class="flex items-center gap-2 md:gap-4 min-w-0">
@@ -26,6 +27,6 @@
     class="text-gray-400 hover:text-white transition-colors hidden sm:block"
     aria-label="Like song"
   >
-    <img src={`${import.meta.env.BASE_URL}/icons/heart.svg`} alt="" class="w-5 h-5" />
+    <Icon name="heart" class="w-5 h-5" />
   </button>
 </div>
