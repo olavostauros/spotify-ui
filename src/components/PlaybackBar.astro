@@ -8,19 +8,19 @@ import VolumeControl from './VolumeControl.astro';
 <div
   class="fixed bottom-0 left-0 right-0 z-50 h-[90px] bg-spotify-light-gray border-t border-gray-800"
 >
-  <div class="grid grid-cols-3 items-center gap-4 px-4 h-full">
-    <!-- Left: Track Info -->
-    <div class="flex justify-start">
+  <div class="grid grid-cols-[1fr,auto] md:grid-cols-3 items-center gap-2 md:gap-4 px-2 md:px-4 h-full">
+    <!-- Left: Track Info (compact on mobile) -->
+    <div class="flex justify-start min-w-0">
       <TrackInfo />
     </div>
 
-    <!-- Center: Playback Controls -->
-    <div class="flex justify-center">
+    <!-- Center: Playback Controls (right-aligned on mobile, centered on desktop) -->
+    <div class="flex justify-end md:justify-center">
       <PlaybackControls />
     </div>
 
-    <!-- Right: Volume Control -->
-    <div class="flex justify-end">
+    <!-- Right: Volume Control (hidden on mobile) -->
+    <div class="hidden md:flex justify-end">
       <VolumeControl />
     </div>
   </div>

@@ -3,12 +3,12 @@
 import ProgressBar from './ProgressBar.astro';
 ---
 
-<div class="flex flex-col items-center gap-2 w-full max-w-2xl mx-auto">
+<div class="flex flex-col items-center gap-1 md:gap-2 w-full max-w-2xl mx-auto">
   <!-- Control Buttons Row -->
-  <div class="flex items-center justify-center gap-4">
-    <!-- Shuffle -->
+  <div class="flex items-center justify-center gap-2 md:gap-4">
+    <!-- Shuffle: hidden on mobile -->
     <button
-      class="text-gray-400 hover:text-white transition-colors"
+      class="text-gray-400 hover:text-white transition-colors hidden md:block"
       aria-label="Shuffle"
     >
       <img src={`${import.meta.env.BASE_URL}/icons/shuffle.svg`} alt="" class="w-5 h-5" />
@@ -19,15 +19,15 @@ import ProgressBar from './ProgressBar.astro';
       class="text-gray-400 hover:text-white transition-colors"
       aria-label="Previous track"
     >
-      <img src={`${import.meta.env.BASE_URL}/icons/skip-back.svg`} alt="" class="w-5 h-5" />
+      <img src={`${import.meta.env.BASE_URL}/icons/skip-back.svg`} alt="" class="w-4 h-4 md:w-5 md:h-5" />
     </button>
 
     <!-- Play/Pause (LARGER) -->
     <button
-      class="bg-white text-black rounded-full p-2 hover:scale-105 transition-transform"
+      class="bg-white text-black rounded-full p-1.5 md:p-2 hover:scale-105 transition-transform"
       aria-label="Play"
     >
-      <img src={`${import.meta.env.BASE_URL}/icons/play.svg`} alt="" class="w-8 h-8" />
+      <img src={`${import.meta.env.BASE_URL}/icons/play.svg`} alt="" class="w-6 h-6 md:w-8 md:h-8" />
     </button>
 
     <!-- Next -->
@@ -35,20 +35,20 @@ import ProgressBar from './ProgressBar.astro';
       class="text-gray-400 hover:text-white transition-colors"
       aria-label="Next track"
     >
-      <img src={`${import.meta.env.BASE_URL}/icons/skip-forward.svg`} alt="" class="w-5 h-5" />
+      <img src={`${import.meta.env.BASE_URL}/icons/skip-forward.svg`} alt="" class="w-4 h-4 md:w-5 md:h-5" />
     </button>
 
-    <!-- Repeat -->
+    <!-- Repeat: hidden on mobile -->
     <button
-      class="text-gray-400 hover:text-white transition-colors"
+      class="text-gray-400 hover:text-white transition-colors hidden md:block"
       aria-label="Repeat"
     >
       <img src={`${import.meta.env.BASE_URL}/icons/repeat.svg`} alt="" class="w-5 h-5" />
     </button>
   </div>
 
-  <!-- Progress Bar Row -->
-  <div class="w-full">
+  <!-- Progress Bar Row: hidden on mobile -->
+  <div class="w-full hidden md:block">
     <ProgressBar />
   </div>
 </div>
