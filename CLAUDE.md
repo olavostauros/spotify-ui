@@ -6,26 +6,32 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Spotify UI clone built with Astro 5.16.6 and Tailwind CSS. The project features a complete Spotify-like layout with sidebar navigation, main content area, and a detailed playback bar component at the bottom. This is a static mockup with no functional playback controls.
 
+### Live Deployments
+- **Vercel**: https://spotify-ui-lemon-eta.vercel.app/
+- **GitHub Pages**: https://olavostauros.github.io/
+
 ## Development Commands
+
+This project uses **pnpm** as the package manager for compatibility with GitHub and Vercel services.
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server (runs at localhost:4321)
-npm run dev
+pnpm run dev
 
 # Build for production (output to ./dist/)
-npm run build
+pnpm run build
 
 # Preview production build locally
-npm run preview
+pnpm run preview
 
 # Run Astro CLI commands
-npm run astro ...
+pnpm run astro ...
 
 # Get Astro CLI help
-npm run astro -- --help
+pnpm run astro -- --help
 ```
 
 ## Architecture
