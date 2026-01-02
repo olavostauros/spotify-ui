@@ -8,7 +8,7 @@ This is a Spotify UI clone built with Astro 5.16.6 and Tailwind CSS. The project
 
 ### Live Deployments
 - **Vercel**: https://spotify-ui-lemon-eta.vercel.app/
-- **GitHub Pages**: https://olavostauros.github.io/
+- **GitHub Pages**: https://olavostauros.github.io/spotify-ui/
 
 ## Development Commands
 
